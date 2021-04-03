@@ -1,0 +1,65 @@
+$shadow-color: #00000021;
+$fsl-blue: #0071ce;
+$text-color: #484848;
+$text-color-secondary: #acacac;
+
+.panel {
+    box-shadow: 0px 0px 20px $shadow-color;
+    background: white;
+    border-radius: 1em;
+    color: $text-color;
+    overflow: scroll;
+    position: relative;
+
+    @media screen and (min-device-width: 1367px) {
+        overflow: auto;
+    }
+
+    &__title {
+        position: relative;
+        margin: 0;
+        display: inline-block;
+        margin-bottom: 45px;
+        font-weight: bold;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 5px;
+            width: 33%;
+            background-color: $fsl-blue;
+            margin-top: 5px;
+        }
+    }
+
+    table {
+        thead {
+            tr {
+                background-color: #0071ce;
+                color: white;
+
+                th {
+                    border-bottom: none;
+                }
+            }
+        }
+
+        th, td {
+            min-width: 180px;
+            width: 180px;
+        }
+    }
+
+    .loader {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: #ffffffa3;
+        left: 0;
+        top: 0;
+    }
+}

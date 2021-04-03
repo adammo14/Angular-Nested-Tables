@@ -1,0 +1,42 @@
+$shadow-color: #00000021;
+$fsl-blue: #0071ce;
+$text-color: #484848;
+$text-color-secondary: #acacac;
+
+.login-form {
+    height: 100vh;
+
+    .title {
+        color: $text-color;
+    }
+
+    .subtitle {
+        color: $text-color-secondary;
+    }
+
+    input {
+        border: 2px solid $text-color-secondary;
+        height: 50px;
+    }
+
+    .card {
+        border: none;
+        box-shadow: 0px 0px 20px $shadow-color;
+        border-radius: 1em;
+
+        .card-body {
+            padding: 35px;
+        }
+    }
+
+    .link {
+        color: $fsl-blue;
+        font-weight: bold;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .btn {
+        background-color: $fsl-blue;
+    }
+}

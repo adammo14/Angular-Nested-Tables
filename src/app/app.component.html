@@ -1,0 +1,18 @@
+<main role="main">
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="d-flex justify-content-between" *ngIf="currentUser">
+                <div class="pull-left">
+                    <a class="links" *ngFor="let link of routeLinks" id="{{ link.link }}" routerLink="{{ link.link }}" routerLinkActive="active-link">
+                        {{ link.label }}
+                    </a>
+                </div>
+                <div class="pull-right">
+                    <a class="links" *ngIf="currentUser" (click)="logout()">Log Out</a>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <router-outlet></router-outlet>
+</main>
